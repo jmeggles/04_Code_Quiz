@@ -1,5 +1,5 @@
-var question = [
-        // Random questions, choices, answer for code quiz (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
+var questions = [
+    // Random questions, choices, answer for code quiz (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
     // {
     //     title: "In California you can’t legally buy a mousetrap without having what?"
     //     choices: ["Photo ID", "Hunting License", "Two Arms", "Proof of Infestation"]
@@ -30,6 +30,19 @@ var question = [
     //     choices: ["90 miles", "55 miles", "10 miles", "85 miles"]
     //     answer: "55 miles"
     // }
+
+        {
+            title: "How long is New Zealand’s Ninety Mile Beach?",
+            choices: ["90 miles", "55 miles", "10 miles", "85 miles"],
+            answer: "55 miles"
+        },
+        {
+            title: "Example Question 2:",
+            choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+            answer: "answer from choices"
+        }
+        
+
 ];
 
 
@@ -40,14 +53,14 @@ var question = [
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and score
-    // form
+// form
 
-// hook elements from page (i.e var example1 = document.quesryselector(".elenet class")) 
+// hook elements from page (i.e var example1 = document.quesryselector(".elemet class")) 
 // hook container element
 var containerEl = document.querySelector(".container");
 
 // hook timer element
-var timer = document.querySelector(".timer");
+var timerDisplay = document.querySelector(".timer");
 
 // create dynamic elements
 var startText = document.createElement("h1")
@@ -59,8 +72,8 @@ var startBtn = document.createElement("button");
 var questionText = document.createElement("p");
 
 // declare global variables
-var timerDisplay = 60
-var index = 0
+var timer = 60;
+var i = 0;
 
 
 function openingPage() {
@@ -73,10 +86,10 @@ function openingPage() {
 // start quiz
 function startQuiz() {
     // ............timer function...........
-    showTimer()
+    showTimer();
 
     // ...............countdown function for next question..............
-    nextQuestion()
+    nextQuestion();
 }
 
 // The timer starts (after stat button clicked)
@@ -84,13 +97,13 @@ function showTimer() {
     // shows timer on screen
     timerDisplay.textContent = timer;
     // timer count intervals
-    var timeInterval = setInterval(function(){
+    var timeInterval = setInterval(function() {
         timer--;
         timerDisplay.textContent = timer;
-        if (timer === 0){
-        clearInterval(timeInterval)
+        if (timer === 0) {
+            clearInterval(timeInterval)
         }
-    }, 5 * 1000)
+    }, 1000)
 
     // decrease timer by 1 if wrong answer chosen
     // set timer to display on screen
@@ -100,7 +113,7 @@ function showTimer() {
 // Presented with a question
 function nextQuestion() {
     // get first question
-    var currentQuestion = question[i];
+    var currentQuestion = questions[i];
     // then empty question container
     containerEl.textContent = "";
     // add current question title to display
@@ -120,11 +133,11 @@ function nextQuestion() {
 
 // check answer
 function checkAnswer(event) {
-    if(event.target.matches(".choiceBtn")) {
-    index++;
-    nextQuestion();
-    
-    // ..........if answered incorrectly.................... 
+    if (event.target.matches(".choiceBtn")) {
+        i++;
+        nextQuestion();
+
+        // ..........if answered incorrectly.................... 
 
     }
 }
