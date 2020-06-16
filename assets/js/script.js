@@ -1,48 +1,35 @@
 var questions = [
     // Random questions, choices, answer for code quiz (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
-    // {
-    //     title: "In California you can’t legally buy a mousetrap without having what?"
-    //     choices: ["Photo ID", "Hunting License", "Two Arms", "Proof of Infestation"]
-    //     answer: "Hunting License"
-    // },
-    // {
-    //     title: "What is Scooby Doo's real name?"
-    //     choices: ["Scooby Doodles", "Scoobert Doo", "Scooby the Dog", "Scooby Doo Doo"]
-    //     answer: "Scoobert Doo"
-    // },
-    // {
-    //     title: "In Florida only on Sundays, it is illegal for a single woman to do what?"
-    //     choices: ["Shop", "Dance", "Skydive", "Drink a Beer"]
-    //     answer: "Skydive"
-    // },
-    // {
-    //     title: "What was the first fruit that was eaten on the moon?"
-    //     choices: ["Apple", "Strawberry", "Banana", "Peach"]
-    //     answer: "Peach"
-    // },
-    // {
-    //     title: "What was the ice cream cone invented for?"
-    //     choices: ["Ice Cream", "Holding FLowers", "Cheerleader Megaphone", "Dunce Cap"]
-    //     answer: "Holding Flowers"
-    // },
-    // {    
-    //     title: "How long is New Zealand’s Ninety Mile Beach?"
-    //     choices: ["90 miles", "55 miles", "10 miles", "85 miles"]
-    //     answer: "55 miles"
-    // }
-
-        {
-            title: "How long is New Zealand’s Ninety Mile Beach?",
-            choices: ["90 miles", "55 miles", "10 miles", "85 miles"],
-            answer: "55 miles"
-        },
-        {
-            title: "Example Question 2:",
-            choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-            answer: "answer from choices"
-        }
-        
-
+    {
+        title: "What is Scooby Doo's real name?",
+        choices: ["Scooby Doodles", "Scoobert Doo", "Scooby the Dog", "Scooby Doo Doo"],
+        answer: "Scoobert Doo"
+    },
+    {
+        title: "In Florida only on Sundays, it is illegal for a single woman to do what?",
+        choices: ["Shop", "Dance", "Skydive", "Drink a Beer"],
+        answer: "Skydive"
+    },
+    {
+        title: "How long is New Zealand’s Ninety Mile Beach?",
+        choices: ["90 miles", "55 miles", "10 miles", "85 miles"],
+        answer: "55 miles"
+    },
+    {
+        title: "In California you can’t legally buy a mousetrap without having what?",
+        choices: ["Photo ID", "Hunting License", "Two Arms", "Proof of Infestation"],
+        answer: "Hunting License"
+    },
+    {
+        title: "What was the first fruit that was eaten on the moon?",
+        choices: ["Apple", "Strawberry", "Banana", "Peach"],
+        answer: "Peach"
+    },
+    {
+        title: "What was the ice cream cone invented for?",
+        choices: ["Ice Cream", "Holding FLowers", "Cheerleader Megaphone", "Dunce Cap"],
+        answer: "Holding Flowers"
+    },
 ];
 
 
@@ -97,7 +84,7 @@ function showTimer() {
     // shows timer on screen
     timerDisplay.textContent = timer;
     // timer count intervals
-    var timeInterval = setInterval(function() {
+    var timeInterval = setInterval(function () {
         timer--;
         timerDisplay.textContent = timer;
         if (timer === 0) {
