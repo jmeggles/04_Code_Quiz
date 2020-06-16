@@ -135,4 +135,3 @@ startBtn.addEventListener("click", startQuiz);
 document.addEventListener("click", checkAnswer);
 
 openingPage()
-
