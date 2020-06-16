@@ -1,14 +1,16 @@
 var questions = [
-    // Random questions, choices, answer for code quiz (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
+    // Random questions, choices, and answers for code quiz (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
     {
         title: "What is Scooby Doo's real name?",
         choices: ["Scooby Doodles", "Scoobert Doo", "Scooby the Dog", "Scooby Doo Doo"],
-        answer: "Scoobert Doo"
+        answer: "Scoobert Doo",
+        image: "/scooby.png"
     },
     {
         title: "In Florida only on Sundays, it is illegal for a single woman to do what?",
         choices: ["Shop", "Dance", "Skydive", "Drink a Beer"],
-        answer: "Skydive"
+        answer: "Skydive",
+        image: "skydive"
     },
     {
         title: "How long is New Zealand’s Ninety Mile Beach?",
@@ -25,22 +27,7 @@ var questions = [
         choices: ["Apple", "Strawberry", "Banana", "Peach"],
         answer: "Peach"
     },
-    {
-        title: "What was the ice cream cone invented for?",
-        choices: ["Ice Cream", "Holding FLowers", "Cheerleader Megaphone", "Dunce Cap"],
-        answer: "Holding Flowers"
-    },
 ];
-
-
-// ?? WHEN I answer a question
-// ?? WHEN I answer a question incorrectly
-// ?? THEN time is subtracted from the clock
-// ?? WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and score
-// form
 
 // hook elements from page (i.e var example1 = document.quesryselector(".elemet class")) 
 // hook container element
@@ -72,14 +59,15 @@ function openingPage() {
 
 // start quiz
 function startQuiz() {
-    // ............timer function...........
+    
+// timer function...........
     showTimer();
 
-    // ...............countdown function for next question..............
+// countdown function for next question..............
     nextQuestion();
 }
 
-// The timer starts (after stat button clicked)
+// The timer starts (after stat button clicked), set timer to display on screen
 function showTimer() {
     // shows timer on screen
     timerDisplay.textContent = timer;
@@ -90,12 +78,21 @@ function showTimer() {
         if (timer === 0) {
             clearInterval(timeInterval)
         }
-    }, 1000)
+    }, 1000
 
-    // decrease timer by 1 if wrong answer chosen
-    // set timer to display on screen
-    // if timer gets to zero, clear interval
-}
+// decrease timer by 1 if wrong answer chosen
+
+
+
+// if timer gets to zero, clear interval
+    // if (now == 0) {
+    //     clearInterval(x);
+    //     document.getElementById("demo").innerHTML = "EXPIRED";
+    //   }
+
+
+    )}
+
 
 // Presented with a question
 function nextQuestion() {
@@ -124,10 +121,14 @@ function checkAnswer(event) {
         i++;
         nextQuestion();
 
-        // ..........if answered incorrectly.................... 
+// if answered correctly, add a point, timer does not get affected
+
+// if answered incorrectly, no points, timer gets deducted 10 seconds
 
     }
 }
+
+// save player initls and score
 
 
 // When start button is clicked
