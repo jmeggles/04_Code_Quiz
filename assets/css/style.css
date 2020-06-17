@@ -1,9 +1,7 @@
 .container {
     text-align: center;
     background: lightgray;
-    opacity: 0.9;
     margin-top: 100px;
-    margin: auto;
 }
 
 .main-content {
@@ -15,30 +13,30 @@
     text-align: center;
 }
 
+#timerLooks {
+    font-size: 50px;
+    padding-left: 10%;
+}
+
+#resultsLooks {
+    font-size: 50px;
+    padding-right: 10%;
+}
 
 
 
 
 
-
-
-/* button {
+button {
     text-align: center;
-    font-weight: bold;
     font-size: 20px;
     margin: 20px;
 }
 
 button:hover {
-    background: blueviolet;
+    background: lightskyblue;
     color: white;
-    opacity: 0.5;
   }
-
-
-body {
-    background-image: url();
-}
 
 .game-over {
     font-size: 40px;
@@ -70,6 +68,6 @@ body {
     margin-top: 30px;
  }
 
-/* img {
+img {
     height: 250px;
-} */ 
+} 
