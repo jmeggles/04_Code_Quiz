@@ -142,32 +142,29 @@ function nextQuestion() {
 }
 
 
-
-// trying to add css through jquery
-// $ (function() {
-//     $("questionText").css({color: "red"});
-
-// });
-
 // attach image to answer screen
 function displayImage() {
-    $("<img/>")
-        .attr("src", "assets/images" + questions[questionCounter - 1].image)
-        .appendTo('#image-holder');
+    
+    
 }
-
-
-
 
 // check answer
 function checkAnswer(event) {
     if (event.target.matches(".choiceBtn")) {
         i++;
+        console.log("answerBtn clicked", event.target.textContent)
+
+        var userAnswer = event.target.textContent
+        // if answered correctly, add a point, timer does not get affected
+
+    
+        // if answered incorrectly, no points, timer gets deducted 10 seconds
+
+
+
         nextQuestion();
 
-// if answered correctly, add a point, timer does not get affected
 
-// if answered incorrectly, no points, timer gets deducted 10 seconds
 
     }
 }
