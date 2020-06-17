@@ -16,10 +16,18 @@
     text-align: center;
 }
 .nav {
-    display: flex;
+    display: ;
     background-color: lightgrey;
     justify-content: space-between;
     font-size: 50px;
+}
+
+.timer {
+    margin-left: 30%;
+}
+
+.score {
+    margin-right: 30%;
 }
 
 .results {

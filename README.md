@@ -14,7 +14,6 @@ Open the Code Quiz with the following links to view and begin the quiz.  The qui
 This project was the first homework assignemnt using web APIs. I chose random questions for fun. 
 
 ## Tech/framework used
-- JQuery
 - Javascript
 - CSS
 - HTML
@@ -33,4 +32,7 @@ None
 
 ## Acknowledgments
 (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
+Ben Benson - WebDev Tutoring
+(https://www.w3schools.com/)
+()
 
