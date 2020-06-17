@@ -73,6 +73,9 @@ function startQuiz() {
 
 // countdown function for next question..............
     nextQuestion();
+
+// tally count for correct answers......
+    tally();
 }
 
 // The timer starts (after stat button clicked), set timer to display on screen
@@ -88,7 +91,7 @@ function showTimer() {
         }
     }, 1000
 
-    
+        
     
     
     
@@ -100,9 +103,6 @@ function showTimer() {
     //     seconds -= 1;
     //     el.innerText = "Time remaining  " + seconds + ;
     // }
-
-
-
 
 
 
