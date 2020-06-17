@@ -113,9 +113,8 @@ function nextQuestion() {
     containerEl.appendChild(answersDiv);
 }
 
-// check answer
+// check is answer user selected is correct or not
 function checkAnswer() {
-
     var userAnswer = this.textContent;
     // when user selects correct answer it adds a point to the socre side
     if (userAnswer === questions[i].answer) {

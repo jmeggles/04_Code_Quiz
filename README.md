@@ -1,8 +1,8 @@
-# Code Quiz
-This project is a Code Quiz of questions of random subjects given a choice of answers to choose from using web APIs.  
+# Jodes' Code Quiz!
+This project is a Code Quiz using random subjects.  Questions are given along with a choice of answers to choose from using web APIs.  
 
-<img src="">
-<img src="">
+<img src="/assets/screenshot1.png" width=600>
+<img src="/assets/screenshot2.png" width=600>
 
 (https://github.com/jmeggles/04_Code_Quiz)
 (https://jmeggles.github.io/04_Code_Quiz/)
@@ -31,8 +31,8 @@ Jody Eggleston
 None
 
 ## Acknowledgments
-(https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
-Ben Benson - WebDev Tutoring
-(https://www.w3schools.com/)
-()
-
+- John Dinsmore
+- Jorge Alvarez
+- Ben Benson WebDev Tutoring
+- (https://www.w3schools.com/)
+- (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
