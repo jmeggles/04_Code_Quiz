@@ -10,7 +10,7 @@ var questions = [
         title: "In Florida only on Sundays, it is illegal for a single woman to do what?",
         choices: ["Shop", "Dance", "Skydive", "Drink a Beer"],
         answer: "Skydive",
-        image: "skydive"
+        image: "/skydive.jpeg"
     },
     {
         title: "How long is New Zealand’s Ninety Mile Beach?",
@@ -45,9 +45,14 @@ var startBtn = document.createElement("button");
 // create p tag tp display questions
 var questionText = document.createElement("p");
 
+// question counter to tally correct answers
+var questionCounter = document.createElement("tally")
+
 // declare global variables
 var timer = 60;
 var i = 0;
+// counter to add correct answers
+var tally = "";
 
 
 function openingPage() {
@@ -90,7 +95,7 @@ function showTimer() {
     
     // function incrementSeconds() {
     //     seconds -= 1;
-    //     el.innerText = "Time remaining" + seconds + ;
+    //     el.innerText = "Time remaining  " + seconds + ;
     // }
 
 
@@ -135,6 +140,24 @@ function nextQuestion() {
     }
     containerEl.appendChild(answersDiv);
 }
+
+
+
+// trying to add css through jquery
+// $ (function() {
+//     $("questionText").css({color: "red"});
+
+// });
+
+// attach image to answer screen
+function displayImage() {
+    $("<img/>")
+        .attr("src", "assets/images" + questions[questionCounter - 1].image)
+        .appendTo('#image-holder');
+}
+
+
+
 
 // check answer
 function checkAnswer(event) {
