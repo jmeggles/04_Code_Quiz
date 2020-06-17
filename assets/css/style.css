@@ -15,11 +15,11 @@
     padding-top: 30px;
     text-align: center;
 }
-
-.timer {
-    font-size: 50px;
+.nav {
+    display: flex;
     background-color: lightgrey;
-    padding-left: 10%;
+    justify-content: space-between;
+    font-size: 50px;
 }
 
 .results {

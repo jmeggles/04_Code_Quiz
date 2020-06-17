@@ -38,6 +38,7 @@ var containerEl = document.querySelector(".container");
 
 // hook timer element
 var timerDisplay = document.querySelector(".timer");
+var scoreDisplay = document.querySelector(".score");
 
 // create dynamic elements
 var startText = document.createElement("h1")
@@ -53,9 +54,22 @@ var questionCounter = document.createElement("tally")
 
 // declare global variables
 var timer = 60;
+var timeInterval;
 var i = 0;
 // counter to add correct answers
-var tally = "";
+var score = 0;
+
+
+
+
+// When start button is clicked
+startBtn.addEventListener("click", startQuiz);
+// document.addEventListener("click", checkAnswer);
+
+openingPage()
+
+
+
 
 
 function openingPage() {
@@ -67,60 +81,33 @@ function openingPage() {
 
 // start quiz
 function startQuiz() {
-        
-// timer function...........
+
+    // timer function...........
     showTimer();
 
-// countdown function for next question..............
+    // countdown function for next question..............
     nextQuestion();
 
-// tally count for correct answers......
-    tally();
+    // tally count for correct answers......
+    // tally();
 }
 
 // The timer starts (after stat button clicked), set timer to display on screen
 function showTimer() {
+    clearInterval(timeInterval);
+
     // shows timer on screen
     timerDisplay.textContent = timer;
     // timer count intervals
-    var timeInterval = setInterval(function () {
+    timeInterval = setInterval(function () {
         timer--;
         timerDisplay.textContent = timer;
         if (timer === 0) {
-            clearInterval(timeInterval)
+            endGame()
         }
     }, 1000
-
-        
-    
-    
-    
-// timer countdown   
-    // var seconds = 0;
-    // var el = document.getElementById('seconds-counter');
-    
-    // function incrementSeconds() {
-    //     seconds -= 1;
-    //     el.innerText = "Time remaining  " + seconds + ;
-    // }
-
-
-
-
-
-    
-// decrease timer by 1 if wrong answer chosen
-
-
-
-// if timer gets to zero, clear interval
-    // if (now == 0) {
-    //     clearInterval(x);
-    //     document.getElementById("demo").innerHTML = "EXPIRED";
-    //   }
-
-
-    )}
+    )
+}
 
 
 // Presented with a question
@@ -139,6 +126,7 @@ function nextQuestion() {
         var answerBtn = document.createElement("button");
         answerBtn.classList.add("choiceBtn");
         answerBtn.textContent = currentQuestion.choices[i];
+        answerBtn.onclick = checkAnswer;
         answersDiv.appendChild(answerBtn);
     }
     containerEl.appendChild(answersDiv);
@@ -146,43 +134,83 @@ function nextQuestion() {
 
 
 // attach image to answer screen
-var imgScooby = document.createElement("imgScooby");
-var imgSkydive = document.createElement("imgSkydive");
-var imgPeach = document.createElement("imgPeach");
-var imgMousetrap = document.createElement("imgMousetrap");
-var imgBeach = document.createElement("imgBeach");
+// var imgScooby = document.createElement("imgScooby");
+// var imgSkydive = document.createElement("imgSkydive");
+// var imgPeach = document.createElement("imgPeach");
+// var imgMousetrap = document.createElement("imgMousetrap");
+// var imgBeach = document.createElement("imgBeach");
 
 function displayImage() {
-    
-    
+
+
 }
 
 // check answer
-function checkAnswer(event) {
-    if (event.target.matches(".choiceBtn")) {
-        i++;
-        console.log("answerBtn clicked", event.target.textContent)
+function checkAnswer() {
 
-        var userAnswer = event.target.textContent
-        // if answered correctly, add a point, timer does not get affected
+    var userAnswer = this.textContent;
 
-    
-        // if answered incorrectly, no points, timer gets deducted 10 seconds
-
-
-
-        nextQuestion();
-
-
-
+    if (userAnswer === questions[i].answer) {
+        console.log("correct")
+        score++;
+        scoreDisplay.textContent = score
+    } else {
+        console.log("incorrect")
+        timer -= 10;
     }
+
+
+    i++;
+    if (i === questions.length) {
+        endGame()
+    } else {
+        nextQuestion();
+    }
+
+
+    // if (event.target.matches(".choiceBtn")) {
+    //     i++;
+    //     console.log("answerBtn clicked", event.target.textContent)
+
+    //     var userAnswer = event.target.textContent
+    //     // if answered correctly, add a point, timer does not get affected
+
+
+    //     // if answered incorrectly, no points, timer gets deducted 10 seconds
+
+
+
+    //     nextQuestion();
+
+
+
+    // }
+}
+
+function endGame() {
+    clearInterval(timeInterval)
+    console.log("game over", score)
+    containerEl.style.display = "none"
 }
 
 // save player initls and score
 
+// var testIntId;
+// var testCount = 50;
+// var btn = document.createElement('button')
+// btn.textContent = "TEST"
+// btn.onclick = testTimer
 
-// When start button is clicked
-startBtn.addEventListener("click", startQuiz);
-document.addEventListener("click", checkAnswer);
+// containerEl.appendChild(btn)
 
-openingPage()
+// function testTimer() {
+//     clearInterval(testIntId);
+
+//     testIntId = setInterval(() => {
+//         console.log(testCount);
+//         testCount--;
+//         if (testCount <= 0) {
+//             clearInterval(testIntId)
+//         }
+//     }, 1 * 1000);
+// }
