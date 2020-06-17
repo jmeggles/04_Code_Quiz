@@ -15,17 +15,20 @@ var questions = [
     {
         title: "How long is New Zealand’s Ninety Mile Beach?",
         choices: ["90 miles", "55 miles", "10 miles", "85 miles"],
-        answer: "55 miles"
+        answer: "55 miles",
+        image: "/beach.jpg"
     },
     {
         title: "In California you can’t legally buy a mousetrap without having what?",
         choices: ["Photo ID", "Hunting License", "Two Arms", "Proof of Infestation"],
-        answer: "Hunting License"
+        answer: "Hunting License",
+        image: "/mousetrap.jpg"
     },
     {
         title: "What was the first fruit that was eaten on the moon?",
         choices: ["Apple", "Strawberry", "Banana", "Peach"],
-        answer: "Peach"
+        answer: "Peach",
+        image: "/peach.jpeg"
     },
 ];
 
@@ -143,6 +146,12 @@ function nextQuestion() {
 
 
 // attach image to answer screen
+var imgScooby = document.createElement("imgScooby");
+var imgSkydive = document.createElement("imgSkydive");
+var imgPeach = document.createElement("imgPeach");
+var imgMousetrap = document.createElement("imgMousetrap");
+var imgBeach = document.createElement("imgBeach");
+
 function displayImage() {
     
     
