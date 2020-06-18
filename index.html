@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jodes' Code Quiz!!</title>
+    <!-- bootstrap library -->
     <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
@@ -14,6 +15,7 @@
 
 <body>
         <div class="nav">
+            <!-- added nav bar where timer and score will appear -->
             <div class="nav-item">
                 Time left: <span class="timer">60</span>
             </div>
@@ -24,12 +26,14 @@
     <div class="container"></div>
     <div class="results" id="myDiv">
         <h1 id="lastPage">0</h1>
+        <!-- form for username info to keep score -->
         <form>
             <input type="text" id="username" placeholder="username">
             <button type="submit" class="btn" id="savescoreBtn" onlick="saveHighScore(event)">Save
             </button>
         </form>
     </div>
+    <!-- javascript library -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

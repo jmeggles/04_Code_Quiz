@@ -1,3 +1,4 @@
+/* added color to brighten the main section for each page also added depth with shadow*/
 .container {
     text-align: center;
     font-size: 35px;
@@ -9,6 +10,7 @@
     box-shadow: grey 0 0 10px 2px;
 }
 
+/* added depth with shadow */
 button {
     font-size: 25px;
     font-style: italic;
@@ -24,6 +26,8 @@ button {
     padding-top: 30px;
     text-align: center;
 }
+
+/* made the top section stand out from the rest of the main section and made text large to see better */
 .nav {
     background-color: lightgrey;
     justify-content: space-between;
@@ -38,15 +42,18 @@ button {
     margin-right: 30%;
 }
 
+/* adjusted size for better viewing */
 .results {
     font-size: 50px;
 }
 
+/* resuts page info */
 #myDiv, #username { 
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
 }
+
 h1 {
     font-size: 30px;
 }
