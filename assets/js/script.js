@@ -73,6 +73,7 @@ function startQuiz() {
     showTimer();
     // countdown function for next question..............
     nextQuestion();
+    results.style.display = "none"
 }
 
 // The timer starts (after stat button clicked), set timer to display on screen
@@ -111,6 +112,16 @@ function nextQuestion() {
         answersDiv.appendChild(answerBtn);
     }
     containerEl.appendChild(answersDiv);
+
+// tried hiding the username input page until the last page but couldn't get it to work
+    // function toggleLastPage() {
+    //     var results = document.getElementById("myDiv");
+    //     if (results.style.display === "none") {
+    //       results.style.display = "block";
+    //     } else {
+    //       results.style.display = "block";
+    //     }
+    //   }
 }
 
 // check is answer user selected is correct or not
@@ -137,21 +148,14 @@ function checkAnswer() {
 function endGame() {
     clearInterval(timeInterval)
     containerEl.style.display = "none"
-
 }
 
-// save player initls and score
-// function showResults() {
-//     if (scoreDisplay)
-// }
+// scorebord for lst page to let user enter name for saving score
+// not working code, needs to be reevaluated
 function showResults() {
 const username = document.getElementById("username");
 const savescoreBtn = document.getElementById("savescoreBtn");
 const finalScore = document.getElementById("finalScore");
-
-
 username.addEventListener("keyup", () => {
  })
-
-
 }
