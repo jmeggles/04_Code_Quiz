@@ -31,7 +31,6 @@ None
 - John Dinsmore
 - Jorge Alvarez
 - Ben Benson WebDev Tutoring
-- Blaire 'learning-assistant'
 - (https://www.w3schools.com/)
 - (https://thoughtcatalog.com/samantha-newman/2020/04/funny-trivia-questions/)
 - (https://www.youtube.com/watch?v=riDzcEQbX6k)
