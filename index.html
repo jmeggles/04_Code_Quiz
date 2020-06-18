@@ -22,8 +22,14 @@
             </div>
         </div>
     <div class="container"></div>
-    <div class="results"></div>
-
+    <div class="results">
+        <h1 id="lastPage">0</h1>
+        <form>
+            <input type="text" name="username" id="username" placeholder="username">
+            <button type="submit" class="btn" id="savescoreBtn" onlick="saveHighScore(event)">Save
+            </button>
+        </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

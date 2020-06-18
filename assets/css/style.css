@@ -1,10 +1,19 @@
 .container {
     text-align: center;
     font-size: 35px;
+    color: white;
     background: #00CDCD;
     margin-top: 50px;
     padding-bottom: 100px;
     padding-top: 100px;
+    box-shadow: grey 0 0 10px 2px;
+}
+
+button {
+    font-size: 25px;
+    font-style: italic;
+    background-color: lightcyan;
+    box-shadow: grey 0 0 6px 2px;
 }
 
 .main-content {
@@ -35,9 +44,4 @@
     padding-right: 10%;
 }
 
-button {
-    font-size: 25px;
-    font-style: italic;
-    background-color: lightcyan;
-}
 

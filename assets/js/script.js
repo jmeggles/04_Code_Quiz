@@ -45,7 +45,7 @@ var startBtn = document.createElement("button");
 var questionText = document.createElement("p");
 
 // question counter to tally correct answers
-var questionCounter = document.createElement("tally")
+var questionCounter = document.createElement("score")
 
 // declare global variables
 var timer = 60;
@@ -137,6 +137,21 @@ function checkAnswer() {
 function endGame() {
     clearInterval(timeInterval)
     containerEl.style.display = "none"
+
 }
 
 // save player initls and score
+// function showResults() {
+//     if (scoreDisplay)
+// }
+function showResults() {
+const username = document.getElementById("username");
+const savescoreBtn = document.getElementById("savescoreBtn");
+const finalScore = document.getElementById("finalScore");
+
+
+username.addEventListener("keyup", () => {
+ })
+
+
+}
