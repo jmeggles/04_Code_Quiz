@@ -10,6 +10,21 @@ This project is a Code Quiz using random subjects.  Questions are given along wi
 ## How it works
 Open the Code Quiz with the following links to view and begin the quiz.  The quiz qill start with a welcome page where a button needs to be ressed to begin the game.  The first question is presented along with 4 choices of answers and the timer begins to count down.  When a correct selection to that answer has been made, a point will be added to the scoreboard, the next question appears, and the timer is not affected.  However, if an incorrect answer is selected to that questions, the timer will deduct time and no points are added to the score.  So choose wisely!  When either the timer runs out or all questions have been answered, the game is over and a score will be presented.  Replay to see if you can guess them all correctly!  The player can add his/her name to the winner's score form at the end.  
 
+### Criteria needed
+```
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and score
+```
+
 ## Motivation
 This project was the first homework assignemnt using web APIs. I chose random questions for fun and chnged the colors to be bright and cheery.
 
